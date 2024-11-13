@@ -7,7 +7,7 @@ var directional_change = false
 var directional = 0 # 0 null, 1, foward, 2 back, 3 left, 4 right, 5 left stafe, 6 right stafe
 
 # 1, foward, 2 back, 3 left, 4 right
-var thrusts_array = [1.0, 1.0, 1.0, 1.0]
+var thrusts_array = [10.0, 10.0, 10.0, 10.0]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,7 +26,7 @@ func _process(delta: float) -> void:
 			0: # null
 				pass
 			1: # foward                    #TODO 0 changes direction
-				self.apply_impulse(Vector2(0,-thrusts_array[0]))
+				self.apply_central_force(Vector2(0,-thrusts_array[0]))
 			2: # back
 				self.apply_impulse(Vector2(0,thrusts_array[1]))
 			3: # left
