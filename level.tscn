@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://qc2lxlbyxmk1"]
+
+[ext_resource type="PackedScene" uid="uid://lmn1v0us4j3h" path="res://player.tscn" id="1_8l7jh"]
+[ext_resource type="Texture2D" uid="uid://b6hv23oiop28k" path="res://icon.svg" id="2_6dpnt"]
+[ext_resource type="Script" path="res://cursor.gd" id="2_i3q0c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2vtob"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_8l7jh")]
+
+[node name="Cursor" type="Node2D" parent="."]
+script = ExtResource("2_i3q0c")
+
+[node name="Area2D" type="Area2D" parent="Cursor"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cursor/Area2D"]
+shape = SubResource("CircleShape2D_2vtob")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cursor"]
+self_modulate = Color(1, 0, 1, 1)
+scale = Vector2(0.0572226, 0.0572226)
+texture = ExtResource("2_6dpnt")
