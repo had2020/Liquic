@@ -27,7 +27,3 @@ func _input(event):
 		self.zoom = self.zoom * zooming_speed_mouse
 	elif event.is_action_pressed("ZoomOut") and zoom > min_zoomout:
 		self.zoom = self.zoom / zooming_speed_mouse
-	
-	elif event.is_action("esc"):
-			#get_tree().reload_current_scene() #reset
-			get_tree().quit() #quit

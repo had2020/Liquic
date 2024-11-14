@@ -56,5 +56,5 @@ func _unhandled_input(event: InputEvent) -> void: #TODO keep pushing while held
 	#vertical-directional thrust
 	if event.is_action_pressed("Left"):
 		apply_central_impulse(-Vector2(vertical_trust , 0)) # TODO update with rotation
-	elif event.is_action_pressed("Right"):
+	if event.is_action_pressed("Right"):
 		apply_central_impulse(Vector2(vertical_trust, 0))
