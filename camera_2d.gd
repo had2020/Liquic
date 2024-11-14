@@ -1,7 +1,7 @@
 extends Camera2D
 
 var zooming_speed_mouse = 1.55
-var zooming_speed_pan = 1.0
+var zooming_speed_pan = 1.05
 
 var start_zoom = Vector2(5,5)
 var min_zoomout = Vector2(1.0,1.0)
@@ -19,9 +19,9 @@ func _process(delta: float) -> void:
 func _input(event):
 	# Scrolling TODO add max zoom out or in
 	if event is InputEventPanGesture:
-		if event.delta.y > 0 and zoom > max_zoomin:
+		if event.delta.y > 0 and zoom < max_zoomin:
 			self.zoom = self.zoom * zooming_speed_pan
-		elif event.delta.y < 0 and zoom < min_zoomout:
+		elif event.delta.y < 0 and zoom > min_zoomout:
 			self.zoom = self.zoom / zooming_speed_pan
 	elif event.is_action_pressed("ZoomIn") and zoom < max_zoomin:
 		self.zoom = self.zoom * zooming_speed_mouse
