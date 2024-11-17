@@ -52,9 +52,9 @@ func _physics_process(delta):
 	# Apply a damping factor to the body's velocity
 	linear_velocity *= 1.0 - damping
 
-func _unhandled_input(event: InputEvent) -> void: #TODO keep pushing while held
+#func _unhandled_input(event: InputEvent) -> void: #TODO keep pushing while held
 	#vertical-directional thrust
-	if event.is_action_pressed("Left"):
-		apply_central_impulse(-Vector2(vertical_trust , 0)) # TODO update with rotation
-	if event.is_action_pressed("Right"):
-		apply_central_impulse(Vector2(vertical_trust, 0))
+	#if event.is_action_pressed("Left"):
+		#apply_central_impulse(-Vector2(vertical_trust , 0)) # TODO update with rotation
+	#if event.is_action_pressed("Right"):
+		#apply_central_impulse(Vector2(vertical_trust, 0))
