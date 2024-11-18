@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bssj50kwetptr"]
+
+[ext_resource type="Texture2D" uid="uid://b6hv23oiop28k" path="res://icon.svg" id="1_4kybe"]
+
+[node name="Build_belt" type="Node2D"]
+
+[node name="belt" type="Node2D" parent="."]
+
+[node name="belt_drop" type="Sprite2D" parent="belt"]
+modulate = Color(0.187176, 0.187176, 0.187176, 1)
+position = Vector2(526.5, 0.500008)
+scale = Vector2(0.773437, 5.05469)
+texture = ExtResource("1_4kybe")

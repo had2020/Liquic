@@ -20,7 +20,8 @@ script = ExtResource("3_mmmyh")
 [node name="RigidBody2D" type="RigidBody2D" parent="Buliding Ship"]
 gravity_scale = 0.0
 
-[node name="Center-Gravity" type="Sprite2D" parent="Buliding Ship/RigidBody2D"]
+[node name="Center-Gravity-TODO" type="Sprite2D" parent="Buliding Ship/RigidBody2D"]
+visible = false
 modulate = Color(0, 1, 1, 1)
 z_index = 2
 scale = Vector2(0.0844371, 0.0844371)
