@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu2egl5gushs6"]
+
+[ext_resource type="Script" path="res://build_cursor.gd" id="1_ecsqb"]
+[ext_resource type="Texture2D" uid="uid://b6hv23oiop28k" path="res://icon.svg" id="2_futkd"]
+
+[node name="Build_Mode_Level" type="Node2D"]
+
+[node name="Build_Cursor" type="Node2D" parent="."]
+script = ExtResource("1_ecsqb")
+
+[node name="Sprite2D" type="Sprite2D" parent="Build_Cursor"]
+scale = Vector2(0.0844371, 0.0844371)
+texture = ExtResource("2_futkd")

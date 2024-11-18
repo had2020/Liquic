@@ -15,7 +15,7 @@ script = ExtResource("1_hlxam")
 [node name="Player" parent="Active" instance=ExtResource("1_8l7jh")]
 can_sleep = true
 
-[node name="Cursor" type="Node2D" parent="Active"]
+[node name="Cursor" type="Node2D" parent="Active" groups=["hide_when_frooze"]]
 script = ExtResource("2_i3q0c")
 
 [node name="Area2D" type="Area2D" parent="Active/Cursor"]
