@@ -17,6 +17,8 @@ func freeze_node(node):
 	if not node.is_in_group("non-build-freeze"):
 		if node.is_in_group("hide_when_frooze"):
 			node.visible = false
+		if node.is_in_group("player"):
+			$Active/Player/CollisionShape2D.disabled = true
 		node.set_process(false)
 		if node.get("sleeping") != null:
 			node.sleeping = true
@@ -30,6 +32,8 @@ func unfreeze_node(node):
 	if not node.is_in_group("non-build-freeze"):
 		if node.is_in_group("hide_when_frooze"):
 			node.visible = true
+		if node.is_in_group("player"):
+			$Active/Player/CollisionShape2D.disabled = false
 		node.set_process(true)
 		if node.get("sleeping") != null:
 			node.sleeping = false
@@ -53,6 +57,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		var active_objects = $Active.get_children()
 		if Globals.build_mode == false:
 			Globals.build_mode = true
+			var blue_color = Color(0, 0, 1)  # Create a blue Color object
+			self.modulate = blue_color  # Set the modulate property to blue
 			spawn_build_level()
 			#print("Player entered Build Mode.")
 			for child in active_objects:

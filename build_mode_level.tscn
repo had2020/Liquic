@@ -1,10 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cu2egl5gushs6"]
+[gd_scene load_steps=5 format=3 uid="uid://cu2egl5gushs6"]
 
 [ext_resource type="Script" path="res://build_cursor.gd" id="1_ecsqb"]
 [ext_resource type="Texture2D" uid="uid://b6hv23oiop28k" path="res://icon.svg" id="2_futkd"]
 [ext_resource type="Script" path="res://buliding_ship.gd" id="3_mmmyh"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ax6sy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2cjwi"]
 size = Vector2(63, 63)
@@ -23,10 +21,8 @@ script = ExtResource("3_mmmyh")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="Buliding Ship"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Buliding Ship/RigidBody2D"]
-shape = SubResource("RectangleShape2D_ax6sy")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Buliding Ship/RigidBody2D"]
+[node name="Center-Gravity" type="Sprite2D" parent="Buliding Ship/RigidBody2D"]
+modulate = Color(0, 1, 1, 1)
 scale = Vector2(0.0844371, 0.0844371)
 texture = ExtResource("2_futkd")
 
