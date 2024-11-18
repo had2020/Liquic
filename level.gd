@@ -58,6 +58,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		if Globals.build_mode == false:
 			Globals.build_mode = true
 			var blue_color = Color(0, 0, 1)  # Create a blue Color object
+			blue_color.set_a(0.5)  # Change transparency to 50%
 			self.modulate = blue_color  # Set the modulate property to blue
 			spawn_build_level()
 			#print("Player entered Build Mode.")
