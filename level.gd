@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var build_scene = preload("res://build_mode_level.tscn")
+var loaded_scene
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -38,10 +40,13 @@ func unfreeze_node(node):
 				unfreeze_node(child)
 
 func spawn_build_level():
-	pass
+	var node = build_scene.instantiate()
+	node.global_position = $Active/Player.global_position
+	add_child(node)
+	loaded_scene = node
 
 func despawn_build_level():
-	pass
+	loaded_scene.queue_free()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Build Mode"):

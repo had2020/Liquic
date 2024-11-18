@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c24yu8kwry3yy"]
+
+[ext_resource type="Texture2D" uid="uid://b6hv23oiop28k" path="res://icon.svg" id="1_4525k"]
+[ext_resource type="Script" path="res://ship parts/ship_part.gd" id="1_pb4w4"]
+
+[node name="Bridge" type="Node2D"]
+script = ExtResource("1_pb4w4")
+part_type = "Bridge"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 3.8147e-06)
+scale = Vector2(0.5, 0.492188)
+texture = ExtResource("1_4525k")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-32, -32, 31, -31, 31, 31, -32, 31)
