@@ -56,10 +56,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Build Mode"):
 		var active_objects = $Active.get_children()
 		if Globals.build_mode == false:
+			#var blue_color = Color(0, 0, 0, 0.1) 
+			$Active.modulate.a = 0.1
 			Globals.build_mode = true
-			var blue_color = Color(0, 0, 1)  # Create a blue Color object
-			blue_color.set_a(0.5)  # Change transparency to 50%
-			self.modulate = blue_color  # Set the modulate property to blue
 			spawn_build_level()
 			#print("Player entered Build Mode.")
 			for child in active_objects:
@@ -67,6 +66,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		else:
 			#print("Player exited Build Mode.")
 			Globals.build_mode = false
+			$Active.modulate.a = 1
 			despawn_build_level()
 			for child in active_objects:
 				unfreeze_node(child)

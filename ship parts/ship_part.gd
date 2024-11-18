@@ -10,5 +10,5 @@ func reparent_node(child, new_parent):
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# moving collisionpolygon to main rigidbody
-	reparent_node($CollisionPolygon2D, self.get_parent())
-	reparent()
+	#reparent_node($CollisionPolygon2D, self.get_parent())
+	$CollisionPolygon2D.reparent(self.get_parent(), true)
