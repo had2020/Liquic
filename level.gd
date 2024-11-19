@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var build_scene = preload("res://build_mode_level.tscn")
 var loaded_scene
+@onready var build_belt = preload("res://build_belt.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -27,6 +28,9 @@ func freeze_node(node):
 			var active_objects = node.get_children()
 			for child in active_objects:
 				freeze_node(child)
+	elif node.is_in_group("camera"):
+		var camera = node
+		$Build_mode_level.current_camera_node = camera
 
 func unfreeze_node(node):
 	if not node.is_in_group("non-build-freeze"):
