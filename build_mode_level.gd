@@ -1,12 +1,19 @@
 extends Node2D
 
-var current_camera_node
+@onready var build_belt = preload("res://build_belt.tscn")
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	print(current_camera_node)
+var setup_belt_on_camera = false
 
+func spawn_build_belt(cam):
+	print(cam)
+	var node = build_belt.instantiate()
+	node.global_position = cam.global_position
+	add_child(node)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if setup_belt_on_camera == false:
+		var Global_cam = Globals.camera_node
+		if Global_cam != null:
+			setup_belt_on_camera = true
+			spawn_build_belt(Global_cam)
