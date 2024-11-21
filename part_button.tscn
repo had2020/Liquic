@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://crk22nis8blth"]
+
+[ext_resource type="Texture2D" uid="uid://b6hv23oiop28k" path="res://icon.svg" id="1_h35dl"]
+[ext_resource type="Script" path="res://part_button.gd" id="1_hh18p"]
+
+[node name="part_button" type="Button"]
+self_modulate = Color(0.122252, 0.122252, 0.122252, 1)
+z_index = 1
+offset_right = 74.0
+offset_bottom = 77.0
+script = ExtResource("1_hh18p")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 16.0
+offset_top = 64.0
+offset_right = 130.0
+offset_bottom = 90.0
+scale = Vector2(0.5, 0.5)
+text = "Part_name"
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(37, 35.5)
+scale = Vector2(0.546875, 0.523438)
+texture = ExtResource("1_h35dl")

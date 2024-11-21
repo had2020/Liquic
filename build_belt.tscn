@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://bssj50kwetptr"]
+[gd_scene load_steps=2 format=3 uid="uid://bssj50kwetptr"]
+
+[ext_resource type="PackedScene" uid="uid://crk22nis8blth" path="res://part_button.tscn" id="1_m1now"]
 
 [node name="Build_belt" type="Node2D"]
 
@@ -38,3 +40,9 @@ offset_top = 23.0
 offset_right = 951.0
 offset_bottom = 63.0
 scale = Vector2(5.96, 15.44)
+
+[node name="part_button" parent="belt/CanvasLayer" instance=ExtResource("1_m1now")]
+offset_left = 919.0
+offset_top = 32.0
+offset_right = 993.0
+offset_bottom = 109.0

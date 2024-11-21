@@ -9,7 +9,7 @@
 script = ExtResource("1_jfv8q")
 
 [node name="Build_Cursor" type="Node2D" parent="."]
-z_index = 3
+z_index = 4
 script = ExtResource("1_ecsqb")
 
 [node name="Sprite2D" type="Sprite2D" parent="Build_Cursor"]

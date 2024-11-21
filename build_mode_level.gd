@@ -5,7 +5,7 @@ extends Node2D
 var setup_belt_on_camera = false
 
 func spawn_build_belt(cam):
-	print(cam)
+	#print(cam) # Debug
 	var node = build_belt.instantiate()
 	node.global_position = cam.global_position
 	add_child(node)
