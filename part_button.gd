@@ -1,11 +1,20 @@
 extends Button
 
 @export var part_type = ""
+@onready var base = preload("res://ship part reps/base_part_rep.tscn")
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+# part icons list
+#TODO
+# end of list
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_pressed() -> void:
+	
+	var myparent = self.get_parent().has_part #TODO has part tracking bool
+	var node = base.instantiate()
+	add_child(node)
+
+func _on_button_up() -> void:
+	visible = true
+
+func _on_button_down() -> void:
+	visible = false

@@ -7,6 +7,7 @@
 [node name="belt" type="Node2D" parent="."]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="belt"]
+layer = -1
 
 [node name="Button" type="Button" parent="belt/CanvasLayer"]
 offset_left = 4.0
@@ -46,3 +47,4 @@ offset_left = 919.0
 offset_top = 32.0
 offset_right = 993.0
 offset_bottom = 109.0
+part_type = "bridge"

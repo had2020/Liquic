@@ -24,3 +24,7 @@ text = "Part_name"
 position = Vector2(37, 35.5)
 scale = Vector2(0.546875, 0.523438)
 texture = ExtResource("1_h35dl")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

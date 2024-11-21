@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://df0u1ukpgi4hw"]
+[gd_scene load_steps=3 format=3 uid="uid://df0u1ukpgi4hw"]
+
+[ext_resource type="Script" path="res://ship part reps/base_part_rep.gd" id="1_eyent"]
+[ext_resource type="Texture2D" uid="uid://b6hv23oiop28k" path="res://icon.svg" id="1_ngtn6"]
 
 [node name="Base_part_rep" type="Node2D"]
+script = ExtResource("1_eyent")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ngtn6")
