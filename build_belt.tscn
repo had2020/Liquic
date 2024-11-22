@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bssj50kwetptr"]
+[gd_scene load_steps=3 format=3 uid="uid://bssj50kwetptr"]
 
 [ext_resource type="PackedScene" uid="uid://crk22nis8blth" path="res://part_button.tscn" id="1_m1now"]
+[ext_resource type="Script" path="res://build_ui_manager.gd" id="1_tf71e"]
 
 [node name="Build_belt" type="Node2D"]
 
@@ -8,6 +9,7 @@
 
 [node name="CanvasLayer" type="CanvasLayer" parent="belt"]
 layer = -1
+script = ExtResource("1_tf71e")
 
 [node name="Button" type="Button" parent="belt/CanvasLayer"]
 offset_left = 4.0

@@ -1,16 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://du8gkmxmoqoar"]
+[gd_scene load_steps=3 format=3 uid="uid://du8gkmxmoqoar"]
 
+[ext_resource type="Script" path="res://ship part reps/base_part_rep.gd" id="1_wvcsl"]
 [ext_resource type="Texture2D" uid="uid://b6hv23oiop28k" path="res://icon.svg" id="2_sn00l"]
 
-[node name="Bridge" type="Node2D"]
+[node name="Bridge_rep" type="Node2D" groups=["part"]]
+script = ExtResource("1_wvcsl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, 3.8147e-06)
-scale = Vector2(0.2, 0.2)
+position = Vector2(1.3113e-06, 1.10269e-06)
+scale = Vector2(0.234375, 0.234375)
 texture = ExtResource("2_sn00l")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-scale = Vector2(0.5, 0.5)
-polygon = PackedVector2Array(-32, -32, 31, -31, 31, 31, -32, 31)
+[node name="Area2D" type="Area2D" parent="." groups=["part"]]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+scale = Vector2(0.5, 0.5)
+polygon = PackedVector2Array(-32, -30, 32, -30, 31, 31, -32, 31)
