@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://part_button.gd" id="1_hh18p"]
 
 [node name="part_button" type="Button"]
-self_modulate = Color(0.122252, 0.122252, 0.122252, 1)
+self_modulate = Color(0.316167, 0.316167, 0.316167, 0.545098)
 z_index = 1
 offset_right = 74.0
 offset_bottom = 77.0

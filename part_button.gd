@@ -1,17 +1,20 @@
 extends Button
 
 @export var part_type = ""
-@onready var base = preload("res://ship part reps/base_part_rep.tscn")
 
-# part icons list
-#TODO
+# part list
+@onready var brigde = preload("res://ship part reps/Bridge_rep.tscn")
 # end of list
 
 func _on_pressed() -> void:
 	
-	var myparent = self.get_parent().has_part #TODO has part tracking bool
-	var node = base.instantiate()
-	add_child(node)
+	var self_parent = self.get_parent()
+	
+	var has_part = self_parent.has_part
+	print("")
+	if !has_part:#TODO match for part-type to list
+		var node = brigde.instantiate()
+		self_parent.add_child(node)
 
 func _on_button_up() -> void:
 	visible = true
