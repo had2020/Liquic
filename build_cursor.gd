@@ -6,6 +6,9 @@ var grab_position
 var grabbing = false
 var last_area_over
 
+func _ready() -> void:
+	Globals.build_mode_curosr = self
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	self.global_position = get_global_mouse_position()

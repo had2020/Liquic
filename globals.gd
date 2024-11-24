@@ -1,5 +1,6 @@
 extends Node
 
+var build_mode_curosr
 var build_mode = false
 var camera_node
 
