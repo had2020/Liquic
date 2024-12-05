@@ -16,7 +16,7 @@ z_index = 4
 script = ExtResource("1_ecsqb")
 
 [node name="Sprite2D" type="Sprite2D" parent="Build_Cursor"]
-modulate = Color(0.294118, 0.529412, 0.0745098, 0.219608)
+modulate = Color(0.294118, 1, 0.0745098, 1)
 scale = Vector2(0.0844371, 0.0844371)
 texture = ExtResource("2_futkd")
 
